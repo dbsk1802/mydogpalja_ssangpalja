@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --night: #0a0618;
+  --deep: #12092e;
+  --purple: #2d1b69;
+  --violet: #4a2fa0;
+  --lavender: #8b6fd4;
+  --lilac: #c4b0f5;
+  --star: #f0e8ff;
+  --gold: #ffd87a;
+  --mint: #7fffd4;
+  --rose: #ff8fab;
+  --peach: #ffb347;
+  --glass: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --font-display: 'Gaegu', cursive;
+  --font-body: 'Noto Sans KR', sans-serif;
+}
+
+html, body { height: 100%; background: var(--night); color: var(--star); font-family: var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+#root { min-height: 100dvh; max-width: 430px; margin: 0 auto; position: relative; }
+button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; }
+input, select { font-family: var(--font-body); outline: none; }
+::-webkit-scrollbar { width: 0; }
