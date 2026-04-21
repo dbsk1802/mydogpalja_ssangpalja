@@ -1,5 +1,5 @@
 import React from 'react';
-import { BREED_EMOJI } from '../utils/breeds';
+import { BREED_IMAGE } from '../utils/breeds';
 import { getZodiac } from '../utils/zodiac';
 
 export default function ProfileChip({ profile, active, onClick, onDelete }) {
@@ -16,7 +16,8 @@ export default function ProfileChip({ profile, active, onClick, onDelete }) {
       flexShrink: 0,
       boxShadow: active ? '0 0 16px rgba(139,111,212,0.4)' : 'none',
     }}>
-      <span style={{ fontSize: 18 }}>{BREED_EMOJI[profile.breed] || '🐾'}</span>
+      <img src={BREED_IMAGE[profile.breed] || '/breeds/default.png'} alt={profile.breed}
+        style={{ width: 28, height: 28, borderRadius: '50%', objectFit: 'contain' }} />
       <span style={{ fontSize: 14, fontWeight: active ? 500 : 300, color: active ? '#c4b0f5' : 'rgba(240,232,255,0.8)', whiteSpace: 'nowrap' }}>
         {profile.name}
       </span>

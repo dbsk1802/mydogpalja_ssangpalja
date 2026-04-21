@@ -1,27 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --night: #0a0618;
-  --deep: #12092e;
-  --purple: #2d1b69;
-  --violet: #4a2fa0;
-  --lavender: #8b6fd4;
-  --lilac: #c4b0f5;
-  --star: #f0e8ff;
-  --gold: #ffd87a;
-  --mint: #7fffd4;
-  --rose: #ff8fab;
-  --peach: #ffb347;
-  --glass: rgba(255,255,255,0.06);
-  --glass-border: rgba(255,255,255,0.12);
-  --font-display: 'Gaegu', cursive;
-  --font-body: 'Noto Sans KR', sans-serif;
+  --primary:       #FFD020;
+  --primary-dark:  #F0C000;
+  --primary-light: #FFF3B0;
+  --pink:          #FF5FA0;
+  --pink-light:    #FFD6E8;
+  --purple:        #7C3AED;
+  --purple-light:  #EDE9FE;
+  --bg:            #F8F8F8;
+  --card:          #FFFFFF;
+  --border:        #EEEEEE;
+  --text:          #1A1A1A;
+  --text-sub:      #666666;
+  --text-muted:    #AAAAAA;
+  --font-display:  'Gaegu', cursive;
+  --font-body:     'Noto Sans KR', sans-serif;
+  --shadow:        0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg:     0 4px 24px rgba(0,0,0,0.12);
+  --radius:        16px;
+  --nav-h:         64px;
 }
 
-html, body { height: 100%; background: var(--night); color: var(--star); font-family: var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-#root { min-height: 100dvh; max-width: 430px; margin: 0 auto; position: relative; }
-button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; }
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bg);
+}
+
+button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; background: none; }
 input, select { font-family: var(--font-body); outline: none; }
 ::-webkit-scrollbar { width: 0; }
+
+/* 공통 카드 */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+/* 섹션 헤더 (노란 배경) */
+.section-header {
+  background: var(--primary);
+  border-radius: 12px 12px 0 0;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 핑크 CTA 버튼 */
+.btn-pink {
+  background: var(--pink);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 노란 버튼 */
+.btn-yellow {
+  background: var(--primary);
+  color: var(--text);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 태그 필 */
+.pill {
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
