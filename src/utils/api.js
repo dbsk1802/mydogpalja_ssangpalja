@@ -2,7 +2,7 @@ export async function fetchFortune({ name, breed, birth, personality, zodiac }) 
   const today = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'long' });
   const zodiacInfo = zodiac ? `${zodiac.name}(${zodiac.trait})` : '정보없음';
 
-  const res = await fetch('http://localhost:3001/api/fortune', {
+  const res = await fetch('/api/fortune', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
