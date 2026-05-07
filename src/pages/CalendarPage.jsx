@@ -122,7 +122,6 @@ export default function CalendarPage({ profiles }) {
   const [selectedDate, setSelectedDate] = useState(null);
 
   const selectedDog = profiles.find(p => p.id === selectedDogId);
-  const imgSrc = selectedDog ? (selectedDog.profileImages?.[0] || BREED_IMAGE[selectedDog.breed] || '/breeds/default.png') : null;
 
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();

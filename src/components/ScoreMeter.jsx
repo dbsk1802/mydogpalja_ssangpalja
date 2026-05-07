@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function ScoreMeter({ label, score, text, color }) {
   const [width, setWidth] = useState(0);

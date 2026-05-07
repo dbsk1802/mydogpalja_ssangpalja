@@ -34,7 +34,7 @@ export default function FortunePage({ dog, onBack }) {
     setLoading(false);
   };
 
-  useEffect(() => { load(); }, [dog]);
+  useEffect(() => { load(); }, [dog]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleShare = async () => {
     if (!fortune) return;
